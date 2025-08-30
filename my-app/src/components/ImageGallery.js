@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageItem from './ImageItem';
 
-const ImageGallery = ({ images, onImageDeleted }) => {
+const ImageGallery = ({ images, onImageDeleted, onImageEdited }) => {
   if (images.length === 0) {
     return (
       <div className="empty-gallery">
@@ -17,6 +17,7 @@ const ImageGallery = ({ images, onImageDeleted }) => {
           key={image.id}
           image={image}
           onDelete={onImageDeleted}
+          onEdit={onImageEdited}
         />
       ))}
     </div>

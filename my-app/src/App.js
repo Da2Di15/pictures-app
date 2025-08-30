@@ -104,7 +104,15 @@ function App() {
 
         ) : (
 
-          <ImageGallery images={images} onImageDeleted={loadImages} />
+          <ImageGallery
+
+            images={images}
+
+            onImageDeleted={loadImages}
+
+            onImageEdited={loadImages}
+
+          />
 
         )}
 

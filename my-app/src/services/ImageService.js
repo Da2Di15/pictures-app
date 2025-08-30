@@ -71,6 +71,12 @@ export const imageService = {
     link.remove();
     window.URL.revokeObjectURL(url);
   },
+
+  // Редактировать изображение
+  editImage: async (id, newName) => {
+    const response = await api.patch(`/images/${id}`, { name: newName });
+    return response.data;
+  },
 };
 
 
